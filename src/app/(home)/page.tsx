@@ -5,14 +5,14 @@ export default function HomePage() {
     <main className="flex flex-1 flex-col justify-center text-center">
       <h1 className="mb-4 text-2xl font-bold">Hello World</h1>
       <p className="text-fd-muted-foreground">
-        You can open{' '}
+        Puedes ir a{' '}
         <Link
-          href="/docs"
+          href="/noticias"
           className="text-fd-foreground font-semibold underline"
         >
-          /docs
+          /noticias
         </Link>{' '}
-        and see the documentation.
+        y ver los resumenes de las ocho noticias escogidas.
       </p>
     </main>
   );
