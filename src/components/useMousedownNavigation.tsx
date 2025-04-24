@@ -17,11 +17,12 @@ export function useMousedownNavigation() {
       if (targetLink && targetLink.href) {
         event.preventDefault();
 
-        const url = targetLink.href;
-        const currentUrl = window.location.origin + window.location.pathname + window.location.search;
-
-        if (url !== currentUrl) {
-          router.push(url);
+        const url = new URL(targetLink.href);
+        const currentPath = window.location.pathname + window.location.search;
+        console.log("Current path:", currentPath);
+        console.log("Target URL:", url.pathname + url.search);
+        if (url.pathname + url.search !== currentPath) {
+          router.push(url.pathname + url.search);
         }
       }
     };
