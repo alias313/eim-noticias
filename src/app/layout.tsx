@@ -12,9 +12,9 @@ export const metadata: Metadata = {
   description: 'Resumenes de noticias',
   icons: {
     icon: [
-      { url: '/favicon.ico?v=2', type: 'image/svg+xml' }
+      { url: '/favicon.ico?v=2', type: 'image/x-icon' }
     ],
-    shortcut: [{ url: '/favicon.ico?v=2', type: 'image/svg+xml' }],
+    shortcut: [{ url: '/favicon.ico?v=2', type: 'image/x-icon' }],
   }
 };
 
@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta charSet="UTF-8" />
         <meta name="description" content="Resumenes de noticias" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon.ico?v=2" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon" />
       </head>
       <body className="flex flex-col min-h-screen">
         {children}
