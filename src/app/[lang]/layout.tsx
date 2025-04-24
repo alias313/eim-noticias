@@ -49,6 +49,9 @@ export default async function Layout({
   console.log("Selected translations:", translations[lang as keyof typeof translations]);
   return (
     <RootProvider
+      theme={{
+        defaultTheme: 'light',
+      }}
       i18n={{
         locale: lang,
         locales: locales,
