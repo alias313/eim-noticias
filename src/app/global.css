@@ -1,3 +1,15 @@
 @import 'tailwindcss';
 @import 'fumadocs-ui/css/vitepress.css';
 @import 'fumadocs-ui/css/preset.css';
+
+@layer theme {
+    :root, :host {
+      --vp-c-indigo-2: #16a34a;
+      --color-fd-primary: var(--vp-c-indigo-2);
+    }
+
+    .dark {
+      --vp-c-indigo-2: #22c55e;
+      --color-fd-primary: var(--vp-c-indigo-2) !important;
+    }
+}
