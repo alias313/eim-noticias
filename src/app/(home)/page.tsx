@@ -12,7 +12,7 @@ export default function HomePage() {
         >
           /noticias
         </Link>{' '}
-        y ver los resumenes de las ocho noticias escogidas.
+        y ver los resumenes de las noticias escogidas.
       </p>
     </main>
   );
