@@ -39,7 +39,7 @@ export default async function Layout({
   params
 }: {
   children: ReactNode;
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
   console.log("Current language:", params);

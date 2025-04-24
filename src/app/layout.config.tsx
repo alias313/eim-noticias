@@ -1,4 +1,5 @@
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
+import { i18n } from '@/lib/i18n';
 
 /**
  * Shared layout configurations
@@ -41,4 +42,5 @@ export const baseOptions: BaseLayoutProps = {
       </>
     ),
   },
+  i18n,
 };
