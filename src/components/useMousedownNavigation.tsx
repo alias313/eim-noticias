@@ -16,9 +16,15 @@ export function useMousedownNavigation() {
       const targetLink = (event.target as HTMLElement).closest(NAV_LINK_SELECTOR) as HTMLAnchorElement | null;
 
       if (targetLink && targetLink.href) {
-        event.preventDefault();
-
         const url = new URL(targetLink.href);
+        const isExternal = url.origin !== window.location.origin;
+
+        if (isExternal) {
+          // Let the default behavior handle external links
+          return;
+        }
+
+        event.preventDefault();
 
         // Handle hash navigation
         if (url.hash) {
@@ -30,8 +36,7 @@ export function useMousedownNavigation() {
         }
 
         const currentPath = window.location.pathname + window.location.search;
-        console.log("Current path:", currentPath);
-        console.log("Target URL:", url.pathname + url.search);
+
         if (url.pathname + url.search !== currentPath) {
           router.push(url.pathname + url.search);
         }
