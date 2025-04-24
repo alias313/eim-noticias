@@ -28,6 +28,9 @@ const locales = i18n.languages.map(lang => ({
 const esTranslations: Partial<Translations> = {
   toc: "En esta página",
   search: "Buscar documentos",
+  nextPage: "Siguiente página",
+  previousPage: "Página anterior",
+  chooseLanguage: "Elegir idioma",
 };
 
 const translations = {
