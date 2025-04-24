@@ -22,6 +22,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html className={inter.className} suppressHydrationWarning>
       <head>
+        <meta charSet="UTF-8" />
+        <meta name="description" content="Resumenes de noticias" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico?v=2" type="image/svg+xml" />
       </head>
       <body className="flex flex-col min-h-screen">
