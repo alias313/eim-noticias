@@ -2,7 +2,7 @@
 import { useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 
-const NAV_LINK_SELECTOR = 'a[href^="/noticias"]';
+const NAV_LINK_SELECTOR = 'a[href^="/"]';
 
 export function useMousedownNavigation() {
   const router = useRouter();
