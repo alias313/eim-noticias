@@ -2,7 +2,7 @@
 import { useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 
-const NAV_LINK_SELECTOR = 'a[href^="/"]';
+const NAV_LINK_SELECTOR = 'a';
 
 export function useMousedownNavigation() {
   const router = useRouter();
@@ -14,10 +14,21 @@ export function useMousedownNavigation() {
 
     const handleMouseDown = (event: MouseEvent) => {
       const targetLink = (event.target as HTMLElement).closest(NAV_LINK_SELECTOR) as HTMLAnchorElement | null;
+
       if (targetLink && targetLink.href) {
         event.preventDefault();
 
         const url = new URL(targetLink.href);
+
+        // Handle hash navigation
+        if (url.hash) {
+          const element = document.querySelector(url.hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            return;
+          }
+        }
+
         const currentPath = window.location.pathname + window.location.search;
         console.log("Current path:", currentPath);
         console.log("Target URL:", url.pathname + url.search);
