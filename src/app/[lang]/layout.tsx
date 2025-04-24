@@ -1,23 +1,12 @@
 import { RootProvider } from 'fumadocs-ui/provider';
 import { Inter } from 'next/font/google';
 import type { ReactNode } from 'react';
-import type { Metadata } from 'next';
 import { i18n } from '@/lib/i18n';
 import type { Translations } from 'fumadocs-ui/i18n';
 
 const inter = Inter({
   subsets: ['latin'],
 });
-
-export const metadata: Metadata = {
-  title: 'Noticias EIM',
-  description: 'Resumenes de noticias',
-  icons: {
-    icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' }
-    ],
-  }
-};
 
 const locales = i18n.languages.map(lang => ({
   locale: lang,

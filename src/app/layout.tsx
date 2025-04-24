@@ -12,14 +12,18 @@ export const metadata: Metadata = {
   description: 'Resumenes de noticias',
   icons: {
     icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' }
+      { url: '/favicon.ico?v=2', type: 'image/svg+xml' }
     ],
+    shortcut: [{ url: '/favicon.ico?v=2', type: 'image/svg+xml' }],
   }
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html className={inter.className} suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.ico?v=2" type="image/svg+xml" />
+      </head>
       <body className="flex flex-col min-h-screen">
         {children}
       </body>
