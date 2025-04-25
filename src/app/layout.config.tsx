@@ -43,4 +43,5 @@ export const baseOptions: BaseLayoutProps = {
     ),
   },
   i18n,
+  githubUrl: 'https://github.com/alias313/eim-noticias',
 };
